@@ -1,0 +1,12 @@
+*.zip
+*.csv
+*.h5
+*.exe
+*.jpg
+*.png
+*.xml
+*.json
+
+
+data/
+exam/
