@@ -20,6 +20,8 @@ def pad(image,kernel, stride):
         pad_w = (kernel_size-1)*2 +  img_length # 4 + 4 = 8
         pad_image = [0 for i in range(pad_w**2)]
         pad_list = [ i  for i in range(pad_w) if i< (pad_w - img_length )//2 or i>= img_length + (pad_w - img_length) //2 ]
+        # 원래 이미지를 제외한 패딩으로 둘러싸일 부분을 리스트 인덱스로 반환받아서 그부분은 처음에 선언한 0으로 그대로 pass
+        # 패딩할 부분을 제외한 부분은 원래 이미지로 반환
         for i in range(pad_w):
             for j in range(pad_w):
                 if i in pad_list or j in pad_list:
@@ -29,7 +31,8 @@ def pad(image,kernel, stride):
 
 
 
-    else:
+    else: # stride가 있을 경우 padding 추후 구현
+        
         return 1
 
 

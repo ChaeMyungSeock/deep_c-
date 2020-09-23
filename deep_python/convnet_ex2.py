@@ -30,6 +30,7 @@ kernel_ch23 = [0, 0, 1, 0]
 # (N, C, H, W)
 # (K, C, kH, kW)
 # (N, K, P, Q)
+
 feat_im1 = [0,0,0,0]
 feat_im2 = [0,0,0,0]
 feat_im3 = [0,0,0,0]
