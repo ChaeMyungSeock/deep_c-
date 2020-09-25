@@ -36,6 +36,6 @@ def tensorflow_pad(image,kernel, stride):
 
     return pad_image
 
-print(len(tensorflow_pad(image, kernel, stride)))
+print(tensorflow_pad(image, kernel, stride))
 
 
