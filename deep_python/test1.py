@@ -1,3 +1,4 @@
+
 image = [3, 2, 4, 5, 2, 3, 1, 0, 4, 2, 1, 4, 3, 4, 7, 2] # (4,4)
 
 # stride = (3,3)
@@ -29,12 +30,9 @@ def pad(image,kernel, stride):
                 else:
                     pad_image[pad_w * i + j] = image[img_length * (i-2) + (j-2)]
 
-
-
     else: # stride가 있을 경우 padding 추후 구현
         
         return 1
-
 
     return pad_image
 
@@ -42,4 +40,4 @@ def pad(image,kernel, stride):
 
 # print(a)
 
-print(len(pad(image, kernel, stride)))
+print(pad(image, kernel, stride))
