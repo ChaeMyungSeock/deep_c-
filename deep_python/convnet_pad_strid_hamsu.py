@@ -18,7 +18,7 @@ def conv_strid(image, feature, kernel, stride):
     feat_w = int(len(feature)**0.5)
 
     # print(image_w)        6
-    # print(kernel_size)    3
+    print(kernel_size)    #3
     # print(feat_w)         2
 
 
@@ -32,12 +32,12 @@ def conv_strid(image, feature, kernel, stride):
             sum = 0
             for k_h in range(kernel_size):
                 for k_w in range(kernel_size):
-                    sum += image[stride * (f_h + f_w) + image_w * k_h + k_w] * kernel[ stride * k_h + k_w]
+                    sum += image[stride * (f_h + f_w) + image_w * k_h + k_w] * kernel[ kernel_size * k_h + k_w]
                     # print(3*k_h+k_w) 0,1,2,3,4,5,6,7,8
             feature[feat_w * f_h + f_w] = sum
     return feature
 
-# print(conv_strid(image, feature, kernel,stride)) [6, 6, 6, 7]
+print(conv_strid(image, feature, kernel,stride)) # [6, 6, 6, 7]
 
 
 # print(feature)  [6, 6, 6, 7]

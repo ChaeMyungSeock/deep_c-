@@ -33,7 +33,7 @@ def tensorflow_pad(image,kernel, stride):
                 pass
             else:
                 pad_image[(img_W+pad) * i + j] = image[img_W * (i-pad//2) + (j-pad//2)]
-
+    
     return pad_image
 
 print(tensorflow_pad(image, kernel, stride))
