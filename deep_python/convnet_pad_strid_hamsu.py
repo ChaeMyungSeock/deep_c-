@@ -1,7 +1,9 @@
 # padding stride 1차원 배열로 구현
 
-image = [0, 0, 0, 0, 0, 0, 0, 3, 2, 4, 5, 0, 0, 2, 3, 1, 0, 0, 0, 4, 2, 1, 4, 0, 0, 3, 4, 7, 2, 0, 0, 0, 0, 0, 0, 0]    
+# image = [0, 0, 0, 0, 0, 0, 0, 3, 2, 4, 5, 0, 0, 2, 3, 1, 0, 0, 0, 4, 2, 1, 4, 0, 0, 3, 4, 7, 2, 0, 0, 0, 0, 0, 0, 0]    
 ## image가 이미 패딩처리되서 나옴
+
+image = [3, 2, 4, 5, 2, 3, 1, 0, 4, 2, 1, 4, 3, 4, 7, 2]    
 
 ## image size = (4, 4), padding = (1, 1), stride = (3, 3)
 ## if stride = (2,2) ...?
@@ -9,8 +11,12 @@ feature = [0 for i  in range(4)] ## feature map = (2, 2) // if stride = (2, 2), 
          
 
 kernel = [1, 1, 0, 0, 1, 0, 1, 0, 1] ## kernel size (3,3)
-
+image_w = int(len(image)**0.5)
+kernel_size = int(len(kernel)**0.5)
 stride = 3
+featureLength = (image_w - kernel_size) // 3 + 1
+print(featureLength)
+
 def conv_strid(image, feature, kernel, stride):
 
     image_w = int(len(image)**0.5)
