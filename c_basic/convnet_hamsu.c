@@ -1,10 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 
-// image = [1,2,3,5,3,2,2,6,3];
-// kernel = [1,0,1,1];
-// featuremap = [0,0,0,0];
-// int* a = (int*)malloc(5 * sizeof(int));
+
 
 void convnet(int image, int kernel, int featuremap);
 
@@ -56,3 +53,9 @@ void convnet(int* image, int* kernel, int* featuremap)
 
     }
 }
+
+
+//  image = [1,2,3,5,3,2,2,6,3];
+// kernel = [1,0,1,1];
+// featuremap = [0,0,0,0];
+// int* a = (int*)malloc(5 * sizeof(int));

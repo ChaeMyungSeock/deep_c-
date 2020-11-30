@@ -2,10 +2,12 @@
 #include <math.h>
 #include <stdlib.h>
 
+/*
 // image = [1,2,3,5,3,2,2,6,3];
 // kernel = [1,0,1,1];
 // featuremap = [0,0,0,0];
 // int* a = (int*)malloc(5 * sizeof(int));
+*/
 
 void convnet(int* image, int* kernel, int stride, int* featuremap);
 
@@ -17,7 +19,7 @@ int stride1[] = { 3, 3 };
 int image_length = sqrt(sizeof(image1) / sizeof(int));
 int kernel_length = sqrt(sizeof(kernel1) / sizeof(int));
 int feature_length = sqrt(sizeof(featuremap1) / sizeof(int));
-int stride = stride1[0]
+int stride = stride1[0];
 
 int main()
 {
